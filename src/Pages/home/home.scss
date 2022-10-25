@@ -1,0 +1,569 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-transform: uppercase;
+}
+
+p {
+	line-height: 2em;
+}
+
+.home {
+	padding-top: 0px !important;
+	>div {
+
+		@media (max-width: 1200px) {
+			padding: 0 40px;
+		}
+
+		@media (max-width: 575px) {
+			padding: 0 10px;
+		}
+	}
+}
+
+.banner {
+	position: relative;
+	display: flex;
+	max-width: var(--container-width);
+	min-height: 100vh;
+	margin: 0 auto 5em;
+	z-index: 1;
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100vw;
+		height: 100%;
+		background: url(../../assets/home/vector-banner.svg);
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+		content: "";
+	}
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100vw;
+		height: 100%;
+		background: linear-gradient(200deg, #3D0880 -17.3%, #210546 34.43%, #0A0114 60.07%);
+		z-index: -1;
+		content: "";
+
+		@media (max-width: 767px) {
+			background: linear-gradient(210deg, #3D0880 -17.3%, #210546 34.43%, #0A0114 60.07%);
+		}
+
+		@media (max-width: 500px) {
+			background: linear-gradient(230deg, #3D0880 -17.3%, #210546 34.43%, #0A0114 60.07%);
+		}
+	}
+
+	>div:first-child {
+		position: relative;
+		flex: 1 1 55%;
+		align-self: center;
+		z-index: 1;
+
+		.logo {
+			padding-top: 100px;
+			padding-bottom: 50px;
+			display: inline-block;
+
+			@media (min-width: 767px) {
+				display: none;
+			}
+
+			img {
+				width: 130px;
+			}
+		}
+
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			padding-top: 20px;
+			text-align: center;
+			align-self: flex-start;
+		}
+
+		h1 {
+			background: linear-gradient(97.22deg, #FF0677 7.49%, #FFBA53 99.65%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-bottom: 0.2em;
+		}
+
+		p {
+			position: relative;
+			width: 60%;
+
+			@media (max-width: 767px) {
+				width: 100%;
+				margin-bottom: 2em;
+			}
+		}
+
+		.text-2 {
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -3em;
+				left: 0;
+				width: 80px;
+				height: 1px;
+				background: #A7FF2B;
+
+				@media (max-width: 767px) {
+					display: none;
+				}
+			}
+		}
+
+		.down {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+
+			@media (min-width: 767px) {
+				display: none;
+			}
+
+			>div {
+				position: relative;
+				width: 10px;
+				height: 50px;
+				border: 1px solid #DAFF45;
+				border-radius: 50px;
+
+				&:after {
+					position: absolute;
+					top: 5px;
+					left: 50%;
+					transform: translate(-50%, 0);
+					background: #DAFF45;
+					width: 2px;
+					height: 10px;
+					content: '';
+				}
+			}
+
+			>span {
+				display: inline-block;
+				transform: rotateZ(90deg) translate(50px);
+				font-size: 0.8em;
+				letter-spacing: 0.5em;
+				text-transform: uppercase;
+				margin-bottom: 100px;
+			}
+		}
+	}
+
+	>div:last-child {
+		position: relative;
+		flex: 1 1 50%;
+		z-index: 0;
+
+		@media (max-width: 767px) {
+			display: none;
+		}
+
+		img {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-55%, -50%);
+			width: 170%;
+			z-index: -1;
+		}
+	}
+}
+
+div.hero-section {
+	max-width: 100vw;
+	background: linear-gradient(180deg, #090114 13.02%, rgba(34, 8, 70, 0.51) 54.17%, #090114 86.36%);
+
+	> div {
+		max-width: var(--container-width);
+    	margin: auto;
+	}
+}
+
+.section-1 {
+	position: relative;
+	z-index: 1;
+
+	&:before {
+		position: absolute;
+		top: -50px;
+		left: -40px;
+		width: 1200px;
+		height: 1200px;
+		background: url(../../assets/home/iphone_roll.webp) no-repeat;
+		background-size: contain;
+		z-index: 2;
+		content: "";
+
+		@media (max-width: 960px) {
+			left: -30px;
+			background: linear-gradient(#0A0114ef 0%, #0A0114ef 354.3px, #00000000 354.3px, #00000000 100%), url(../../assets/home/iphone_roll.webp) no-repeat;
+			background-size: 900px;
+		}
+	}
+
+	&:after {
+		position: absolute;
+		top: -48px;
+		left: -7px;
+		display: none;
+		width: 581px;
+		height: 448px;
+		background: url(../../assets/home/iphone_roll_ef.png) no-repeat;
+		background-size: auto 768px;
+		z-index: 5;
+		content: "";
+
+		@media (max-width: 960px) {
+			display: block;
+		}
+	}
+
+	>div {
+		position: relative;
+		display: flex;
+
+		&:first-child {
+			position: relative;
+			justify-content: flex-end;
+			height: 422px;
+			background: radial-gradient(104.39% 374.49% at -5.23% 103.54%, #30006F 0%, #0B0118 27.08%, #13002B 56.77%, #27005B 100%);
+
+			@media (max-width: 960px) {
+				padding-top: 400px;
+				height: 0;
+				margin-bottom: calc(400px - 10vw);
+				background: linear-gradient(180deg, #590CBE 0%, rgba(10, 1, 20, 0) 100%);
+				z-index: 3;
+			}
+
+			@media (max-width: 960px) {
+				text-align: center;
+			}
+
+			&:before {
+				position: absolute;
+				top: -3px;
+				left: -3px;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+				background: linear-gradient(97.22deg, #FF0677 7.49%, #FFBA53 99.65%);
+				content: "";
+
+				@media (max-width: 960px) {
+					height: 3px;
+				}
+			}
+
+			>div {
+				width: 57%;
+				align-self: center;
+				justify-self: flex-end;
+				padding: 50px 50px;
+				z-index: 2;
+
+				@media (max-width: 960px) {
+					position: absolute;
+					top: 100%;
+					padding: 0 10px;
+				}
+
+				@media (max-width: 960px) {
+					width: 100%;
+				}
+
+				h2 {
+					background: linear-gradient(97.22deg, #FF0677 7.49%, #FFBA53 99.65%);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					margin-bottom: 0.5em;
+				}
+			}
+		}
+
+		&:last-child {
+			position: relative;
+			padding-top: 12em;
+			padding-bottom: 3em;
+			margin-left: -3em;
+			margin-right: -3em;
+			z-index: 5;
+
+			@media (max-width: 960px) {
+				padding-top: 0em;
+				background: transparent;
+			}
+
+			&>div {
+				padding-left: 3em;
+				padding-right: 3em;
+				margin-bottom: 3em;
+
+				@media (max-width: 1024px) {
+					flex-direction: row;
+					align-items: center;
+				}
+
+				@media (max-width: 767px) {
+					flex-direction: column;
+					text-align: center;
+				}
+
+				>div:first-child {
+					margin-bottom: 3em;
+
+					> div {
+						&:first-child {
+							margin-bottom: 2em;
+
+							img {
+								width: 100px;
+							}
+						}
+
+						h4 {
+							color: #A7FF2B;
+							margin-bottom: 0.5em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.section-2 {
+	position: relative;
+	padding-bottom: 50px;
+	z-index: 2;
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100vw;
+		height: 100%;
+		background: url(../../assets//home/vector-hero-1.svg) no-repeat;
+		background-size: contain;
+		background-position: left;
+		z-index: -1;
+		content: "";
+	}
+
+	&:before {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 100vw;
+		height: 100%;
+		background: url(../../assets//home/vector-hero-2.svg) no-repeat;
+		background-size: contain;
+		background-position: right;
+		z-index: -1;
+		content: "";
+	}
+
+	>div {
+		position: relative;
+		display: flex;
+		background: linear-gradient(97.22deg, #FF0677 7.49%, #FFBA53 99.65%);
+		box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+		padding: 100px 50px;
+
+		@media (max-width: 767px) {
+			flex-direction: column;
+			gap: 15px;
+			padding-bottom: 750px;
+			text-align: center;
+		}
+
+		&:before {
+			position: absolute;
+			top: -3px;
+			left: -3px;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: linear-gradient(90deg, #E3FF3C 0%, #FFFFFF 69.79%);
+			content: "";
+		}
+
+		&:after {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, 0%);
+			width: 100vw;
+			height: 100%;
+			background: radial-gradient(47.48% 37.29% at 50% 46.12%, rgba(163, 0, 255, 0.66) 0%, rgba(107, 14, 228, 0.239583) 55.73%, rgba(107, 14, 228, 0) 94.54%);
+			background-position: center;
+			background-size: contain;
+			opacity: 0.49;
+			z-index: -1;
+			content: "";
+
+			@media (max-width: 767px) {
+				top: 100%;
+				width: 300vw;
+				height: 150vw;
+				transform: translate(-50%, -50%);
+			}
+		}
+
+		>div:first-child {
+			max-width: calc(100% - 350px);
+
+			@media (max-width: 1200px) {
+				max-width: calc(100% - 300px);
+			}
+
+			@media (max-width: 767px) {
+				max-width: max-content;
+			}
+
+			h1 {
+				margin-bottom: 0.6em;
+			}
+
+			p {
+				margin-bottom: 2em;
+				font-size: 1.2em;
+			}
+		}
+
+		>div:last-child {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			min-width: 500px;
+			transform: translate(50px, 0);
+			height: calc(100% + 35px);
+			overflow: hidden;
+
+			@media (max-width: 767px) {
+				bottom: -80px;
+				left: 50%;
+				transform: translate(-53%, 0);
+				min-height: 800px;
+				height: 800px;
+			}
+
+			> div {
+				width: 100%;
+				height: 100%;
+
+				img {
+					position: absolute;
+					top: 0%;
+					left: 0%;
+					width: 100%;
+					background: radial-gradient(50% 50% at 50% 50%, #210546 13.02%, rgba(33, 5, 70, 0) 100%);
+					background-size: contain;
+					background-position: center;
+					max-height: max-content;
+					overflow: none;
+
+					@media (max-width: 767px) {
+						max-height: 100%;
+						filter: drop-shadow(15px 10px 5px rgba(0, 0, 0, 0.37));
+					}
+				}
+			}
+		}
+	}
+}
+
+.download-btn-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+
+	@media (max-width: 767px) {
+		justify-content: center;
+	}
+
+	>button, a {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px;
+		background: #0A0215;
+		padding: 15px 20px;
+		color: var(--color);
+
+		&:hover {
+			background: #3D0880;
+		}
+
+		&:active {
+			background: #782378;
+		}
+
+		.btn-icon {
+			width: 25px !important;
+			height: 25px !important;
+		}
+
+		>div {
+			display: flex;
+			flex-direction: column;
+
+			>span {
+				text-align: left;
+				font-size: 0.8em;
+			}
+
+			h5 {
+				text-transform: capitalize;
+			}
+		}
+
+		@media (max-width: 767px) {
+			width: 80%;
+		}
+	}
+}
+
+.logo-ef {
+	position: relative;
+	height: 600px;
+
+	&:before {
+		position: absolute;
+		top: calc(50% - 150px);
+		left: 50%;
+		width: 100%;
+		height: 750px;
+		transform: translate(-50%, -50%);
+		background: transparent url(../../assets/home/logo-ef.webp) no-repeat;
+		background-size: cover;
+		mix-blend-mode: lighten;
+		background-position: center;
+		z-index: 1;
+		content: "";
+
+		@media (max-width: 767px) {
+			transform: translate(-50%, calc(-50% + 80px));
+		}
+	}
+}
